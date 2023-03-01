@@ -1,0 +1,17 @@
+def str_count(strng, letter):
+    string = tuple(strng)
+    string1 = string.count(letter)
+    return string1
+print(str_count("stephin sebastian","s"))
+
+def str_count(strng, letter):
+    return strng.count(letter)
+print(str_count("stephin sebastian","s"))
+
+def str_count(strng, letter):
+    counter = 0
+    for string in strng:
+        if string == letter:
+            counter += 1
+    return counter
+print(str_count("stephin sebastian","s"))
