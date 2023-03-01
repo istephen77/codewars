@@ -1,0 +1,40 @@
+def warn_the_sheep(queue):
+    n = len(queue) - queue.index("wolf") - 1
+    return f"Oi! Sheep number {n}! You are about to be eaten by a wolf!" if n else "Pls go away and stop eating my sheep"
+print(warn_the_sheep(["sheep", "sheep", "sheep", "wolf", "sheep"]))
+print(warn_the_sheep(["sheep","wolf", "sheep", "sheep", "sheep", "sheep"]))
+print(warn_the_sheep(["sheep", "sheep", "wolf"]))
+
+def warn_the_sheep(queue):
+    i = queue[::-1].index("Wolf")
+    if i == 0:
+        return "Pls go away and stop eating my sheep"
+    else:
+        return f"Oi! Sheep number {i}! You are about to be eaten by a wolf!"
+print(warn_the_sheep(["sheep", "sheep", "sheep", "wolf", "sheep"]))
+
+def warn_the_sheep(queue):
+    i = queue[::-1].index("wolf")
+    return "Pls go away and stop eating my sheep" if i == 0 else f"Oi! Sheep number {i}! You are about to be eaten by a wolf!"
+print(warn_the_sheep(["sheep", "sheep", "sheep", "wolf", "sheep"]))
+print(warn_the_sheep(["sheep", "sheep", "wolf"]))
+
+def warn_the_sheep(queue):
+    queue.reverse()
+    return "Pls go away and stop eating my sheep" if queue[0] == 'wolf' else "Oi! Sheep number {}! You are about to be eaten by a wolf!".format(queue.index("wolf"))
+print(warn_the_sheep(["sheep", "sheep", "sheep", "wolf", "sheep"]))
+print(warn_the_sheep(["sheep", "sheep", "wolf"]))
+
+def warn_the_sheep(queue):
+    wolf_positon=0 #memoy for the position of the wolf
+    for postion, item in enumerate(queue): #lets check every sheep
+        if item == 'wolf': #and if it is a wolf
+            wolf_positon=postion+1 #we will save its position in the memory
+        if wolf_positon == len(queue): #if the wolf is last
+            return 'Pls go away and stop eating my sheep' #We beg the wolf. (Hell no!!!).
+    #this f'{variable} some text' doesnt work in every python version(Python >= 3.6)
+    #{len(queue)-wolf_positon}example: 1,2,3,4,wolf,5,6 len(queue)=7 wolf_pos=5 7-5=2
+    return f'Oi! Sheep number {len(queue)-wolf_positon}! You are about to be eaten by a wolf!'
+print(warn_the_sheep([1,2,3,4,'wolf',5,6]))
+print(warn_the_sheep([1,2,3,4,'wolf']))
+
