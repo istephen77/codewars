@@ -10,3 +10,7 @@ def array_plus_array(arr1,arr2):
         counter += i
     return counter
 print(array_plus_array([1,2,3,4,5],[1,2,3,4,5]))
+
+def array_plus_array(*args):
+    return sum(map(sum, args))
+print(array_plus_array([1,2,3,4,5],[1,2,3,4,5]))
