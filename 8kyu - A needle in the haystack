@@ -1,0 +1,30 @@
+def find_needle(haystack):
+    return "found the needle at position {}".format(haystack.index("needle"))
+print(find_needle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]))
+
+5) 8kyu- A Strange Trip to the Market
+def is_lock_ness_monster(s):
+    return any(i in s for i in ('tree fidy','3.50','three fifty'))
+print(is_lock_ness_monster("It can go upto tree fidy or 3.50 or three fifty"))
+
+import re
+def is_lock_ness_monster(string):
+    return bool(re.search(r'tree fiddy | 3.50 | three fifty', string))
+print(is_lock_ness_monster("It can go upto tree fiddy or 3.50 or three fifty"))
+
+def is_lock_ness_monster(string):
+    check1 = "3.50"
+    check2 = "tree fiddy"
+    check3 = "three fifty"
+    return check1 in string or check2 in string or check3 in string
+print(is_lock_ness_monster("It can go upto tree fiddy or 3.50 or three fifty"))
+
+def is_lock_ness_monster(string):
+    result1 = string.find("3.50")
+    result2 = string.find("tree fiddy")
+    result3 = string.find("three fifty")
+    if result1 != -1 or result2 != -1 or result3 != -1:
+        return True
+    else:
+        return False
+print(is_lock_ness_monster("It can go upto tree fiddy or 3.50 or three fifty"))
