@@ -1,0 +1,15 @@
+def unusual_five():
+    return len("hello");
+
+def unusual_five():
+    return sum(range(len("learn"),len("python")))
+print(unusual_five())
+print(range(len("learn"), len("python")))
+print(sum(range(len("learn"), len("python"))))
+print(sum(range(len("learn"), len("learnsss")))) #sum(5,6,7) --> 18
+
+txt = "Stephen"
+x = "eSn"
+y = "rPz"
+mytable = str.maketrans(x,y)
+print(txt.translate(mytable))
