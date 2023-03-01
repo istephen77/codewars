@@ -1,0 +1,7 @@
+def basic_op(operator, value1, value2):
+    return {'+' : value1+value2, '-':value1-value2, '*' : value1*value2, '/':value1/value2}[operator]
+print(basic_op("+",20,20))
+
+def basic_op(operator, value1, value2):
+    return eval("{}{}{}".format(value1,operator,value2))
+print(basic_op("+",20,20))
