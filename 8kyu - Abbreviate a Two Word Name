@@ -1,0 +1,24 @@
+def abbrevName(name):
+    return '.'.join(w[0].upper() for w in name.split())
+print(abbrevName("aya merimi stephin sebastian"))
+
+def abbrev_name(name):
+    names = name.split()
+    return f"{names[0][0]}.{names[1][0]}".upper()
+print(abbrev_name("aya merimi"))
+
+def abbrev_name(name):
+    first_initial = name[0]
+    for letter in range(len(name)):
+        if name[letter] == ' ':
+            last_initial = name[letter + 1]
+    return (first_initial.upper()+"."+last_initial.upper())
+print(abbrev_name("stephin sebastian"))
+
+def abbrev_name(name):
+    list_name = []
+    names = name.split(" ")
+    for i in names:
+        list_name.append(i[0].upper())
+    return '.'.join(list_name)
+print(abbrev_name("stephin sebastian"))
