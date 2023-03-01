@@ -1,0 +1,11 @@
+def are_you_playing_banjo(name):
+    return name+" plays banjo" if name[0] == 'R' or name[0] == 'r' else name+' does not play banjo'
+print(are_you_playing_banjo("Ranjita"))
+print(are_you_playing_banjo("ranjita"))
+print(are_you_playing_banjo("Stephin"))
+
+def are_you_playing_banjo(name):
+    return name+" plays banjo" if name.startswith('R') or name.startswith('r') else name+' does not play banjo'
+print(are_you_playing_banjo("Ranjita"))
+print(are_you_playing_banjo("ranjita"))
+print(are_you_playing_banjo("Stephin"))
